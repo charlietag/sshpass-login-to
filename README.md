@@ -18,22 +18,22 @@ Using config to login to remote hosts without interactive prompt
 # Configuration
   * ssh.sample.cfg
 
-  ```bash
-  host:123.123.123.123
-  port:22
-  user:myusername
-  pass:mypassword
-  ```
+    ```bash
+    host:123.123.123.123
+    port:22
+    user:myusername
+    pass:mypassword
+    ```
 
 # Usage
   * Generic usage
 
-  ```bash
-  ./login_to ssh.sample.cfg
-  ```
+    ```bash
+    ./login_to ssh.sample.cfg
+    ```
 
   * Hosts behind some special firewall
 
-  ```bash
-  ./login_to_forward ssh.sample.cfg
-  ```
+    ```bash
+    ./login_to_forward ssh.sample.cfg
+    ```
