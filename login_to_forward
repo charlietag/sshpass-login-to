@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CONFIG_FILE="$1"
+SSH_PORT=22
+SSH_HOST="$(cat $CONFIG_FILE|grep host|cut -d':' -f2)"
+SSH_USER="$(cat $CONFIG_FILE|grep user|cut -d':' -f2)"
+SSH_PASS="$(cat $CONFIG_FILE|grep pass|cut -d':' -f2)"
+SSH_PORT="$(cat $CONFIG_FILE|grep port|cut -d':' -f2)"
+
+#set -x
+sshpass -p "${SSH_PASS}" ssh "${SSH_USER}@${SSH_HOST} -p ${SSH_PORT}" -o StrictHostKeyChecking=no
